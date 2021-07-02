@@ -9,7 +9,6 @@ This is app can be used as a simple planner for your day. It uses the local stor
 - [Usage Instructions](#usage-instructions)
 - [License](#License)
 - [Contribution Guidelines](#contribution-guidelines)
-- [Testing Instructions](#testing-instructions)
 - [Questions?](#questions)
 
 ## Usage instructions
