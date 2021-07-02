@@ -54,6 +54,9 @@ function makeTimeBlocks() {
   timeblockHour12.innerHTML = "12 PM";
 }
 
+makeTimeBlocks();
+changeTimeColor();
+
 //This function takes the user input and saves it to the page as well as to the local storage
 function saveText(hour) {
   const noteInputEl = document.getElementById(`input-${hour}`);
@@ -84,9 +87,5 @@ function onPageLoad() {
     }
   }
 }
-
-makeTimeBlocks();
-
-changeTimeColor();
 
 onPageLoad();
