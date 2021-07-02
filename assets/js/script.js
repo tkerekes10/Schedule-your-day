@@ -10,18 +10,14 @@ function changeTimeColor() {
   for (var i = 0; i < 9; i++) {
     //If the current hour is less than the overall time
     if (currentHour > Number(timeblockHour[i].id)) {
-      console.log("test");
-
       timeblockHour[i].classList.add("future");
 
       //If the current hour is greater than the overall time
     } else if (currentHour < Number(timeblockHour[i].id)) {
-      console.log("test2");
       timeblockHour[i].classList.add("past");
 
       //If the current hour is equal to the overall time
     } else {
-      console.log("this is the current time");
       timeblockHour[i].classList.add("present");
     }
   }
@@ -62,9 +58,6 @@ function makeTimeBlocks() {
 function saveText(hour) {
   const noteInputEl = document.getElementById(`input-${hour}`);
 
-  console.log(noteInputEl);
-  console.log(noteInputEl.value);
-
   const noteInput = noteInputEl.value;
 
   localStorage.setItem(`toDo-${hour}`, noteInput);
@@ -76,18 +69,14 @@ function saveText(hour) {
 const saveButtons = $(".Btn");
 
 saveButtons.on("click", function (event) {
-  console.log(event.target.id);
   saveText(event.target.id);
-  console.log("button was clicked");
 });
 
 //This function add in the local storage data into the correct hour block
 function onPageLoad() {
   for (let i = 0; i < hours.length; i++) {
     let storedInput = localStorage.getItem(`toDo-${hours[i]}`);
-    console.log(storedInput);
     const noteInputEl = document.getElementById(`input-${hours[i]}`);
-    console.log(noteInputEl);
 
     if (storedInput) {
       const noteInputEl = document.getElementById(`input-${hours[i]}`);
